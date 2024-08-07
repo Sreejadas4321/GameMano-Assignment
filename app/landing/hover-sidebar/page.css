@@ -1,0 +1,61 @@
+/* styles/Sidebar.css */
+.hsidebar {
+  width: 200px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+  height: 200vh;
+  position:absolute;
+  top: 0px;
+  border-right: 2px solid #ddd;
+  font-family: 'Press Start 2P', cursive;
+  /* transition: width 2s ease, opacity 2s ease ; */
+}
+
+.logo {
+  font-size: 24px;
+  color: #EAD2A7;
+  margin-bottom: 30px;
+}
+
+.menu,
+.settings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.menu li,
+.settings li {
+  margin: 20px 0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.bottom-line {
+  width: 100%;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}

@@ -1,0 +1,35 @@
+.home {
+    display: flex;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 1rem;
+    padding-left: 12rem;
+  }
+  
+  .gameDetails {
+    color: white;
+    margin: 2rem;
+  }
+  
+  .gameDetails h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gameDetails p {
+    margin: 1rem 0;
+  }
+  
+  .tryButton,
+  .buyButton {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  

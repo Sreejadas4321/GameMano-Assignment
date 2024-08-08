@@ -4,10 +4,13 @@
 import React, { useState } from 'react';
 
 import './page.css';
-import Navbar from './navbar/page';
-import Sidebar from './sidebar/page';
-import HSidebar from './hover-sidebar/page';
+
 import Home from './home/page';
+import Navbar from '../componenet/navbar/page';
+import Sidebar from '../componenet/sidebar/page';
+import HSidebar from '../componenet/hover-sidebar/page';
+import { Card, Trending } from './tending/page';
+
 
 
 const Landing = () => {
@@ -21,16 +24,12 @@ const Landing = () => {
         onMouseLeave={() => setIsHovered(false)} 
         className='sidebar-container'
       >
-        <Sidebar/>
-        {isHovered && (
-          <HSidebar style={{
-            opacity: isHovered ? 1 : 0,
-            width: isHovered ? '200px' : '0px',
-            transition: 'opacity 2s ease, width 2s ease'
-          }} />
-        )}
+        {!isHovered && <Sidebar />}
+        {isHovered && <HSidebar  />
+        }
       </div>
       <Home/>
+      <Trending/>
     </div>
   );
 };

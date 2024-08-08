@@ -1,0 +1,16 @@
+.trending {
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    background-color: rgb(28, 15, 15);
+    padding-bottom: 40px;
+    margin-left: 200px;
+  }
+  
+  .heading {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }

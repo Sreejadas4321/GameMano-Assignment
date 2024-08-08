@@ -8,11 +8,23 @@
     align-items: center;
     padding-bottom: 200px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     border-right: 2px solid #ddd;
     padding-right: 60px;
     padding-left: 60px;
+    overflow: hidden;
+    z-index: 5;
   }
+  /* .sidebar {
+    width: 250px; 
+    background-color: #444;
+    color: white;
+    height: 100vh; 
+    position: fixed; 
+    top: 60px; 
+    overflow: hidden; 
+    z-index: 5;
+  } */
   
   
   .menu,

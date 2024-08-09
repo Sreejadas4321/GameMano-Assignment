@@ -10,4 +10,16 @@
   src: local('Press Start 2P'), local('PressStart2P-Regular'), url('https://fonts.gstatic.com/s/pressstart2p/v8/e3t4euH3NfYyBRQZGnly2QdwFLQUu5QB1uU.woff2') format('woff2');
 }
 
-
+*{  color: azure;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background:  #0000004D;
+  
+}
+.container{
+  width: 100vw;  
+}

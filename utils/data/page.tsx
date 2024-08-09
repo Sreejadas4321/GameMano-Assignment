@@ -12,7 +12,7 @@ export const useFetch = (endpoint : any) => {
 
       if (fetchedData) {
         setData(fetchedData.products);
-        console.log(fetchedData.products);
+        // console.log(fetchedData.products);
       }
     } catch (error) {
       console.log("error", error);

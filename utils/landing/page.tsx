@@ -9,12 +9,17 @@ import Home from './home/page';
 import Navbar from '../componenet/navbar/page';
 import Sidebar from '../componenet/sidebar/page';
 import HSidebar from '../componenet/hover-sidebar/page';
-import { Card, Trending } from './tending/page';
+import { Trending } from './trending/page';
+import { Cdata } from '../componenet/commondata/page';
+
+import { usePathname } from 'next/navigation'
 
 
 
 const Landing = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const pathname = usePathname()
+ 
 
   return (
     <div className='container'>
@@ -22,14 +27,19 @@ const Landing = () => {
       <div 
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)} 
-        className='sidebar-container'
+       
       >
         {!isHovered && <Sidebar />}
         {isHovered && <HSidebar  />
         }
       </div>
-      <Home/>
-      <Trending/>
+      {pathname == "/" && (<>
+        <Home/>
+        <Trending/>
+        <Cdata/>
+      </>)}
+      
+      
     </div>
   );
 };

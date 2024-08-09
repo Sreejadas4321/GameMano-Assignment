@@ -1,0 +1,42 @@
+.side-by-side-container {
+    display: flex;
+    gap: 20px; /* Space between the category list and the card container */
+    padding: 20px;
+    background-color: #f0f0f0; /* Optional: background for the whole section */
+}
+
+.filter-container {
+    flex: 0 0 250px; /* Fixed width for the category list */
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.scrollable-card-container {
+    flex-grow: 1;
+    max-height: 600px; /* Adjust height as needed */
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #fff6d1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.scrollable-card-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Ensure product card styles from the previous steps are included */

@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Press_Start_2P } from "next/font/google";
+import AllLayout from "@/utils/componenet/alllayout";
+import Landing from "@/utils/landing/page";
+// import Navbar from "./componenet/navbar/page";
+// import HSidebar from "./componenet/hover-sidebar/page";
+// import Sidebar from "./componenet/sidebar/page";
+// import { Cdata } from "./componenet/commondata/page";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+     <Landing/>
+    {children}
+       
+      </body>
     </html>
   );
 }

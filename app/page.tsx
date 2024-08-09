@@ -1,10 +1,14 @@
 import Image from "next/image";
-import Landing from "./landing/page";
+
+import Product from "./product/page";
+import Landing from "@/utils/landing/page";
+
 
 export default function Home() {
   return (
     <main >
-     <Landing/>
+     {/* <Landing/> */}
+     
     </main>
   );
 }

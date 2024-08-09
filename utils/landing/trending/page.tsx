@@ -1,10 +1,12 @@
 import React from 'react';
-import { useFetch } from '@/app/data/page';
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import './page.css'
-import { Card } from '@/app/componenet/card/page';
+import { useFetch } from '@/utils/data/page';
+import Card from '@/utils/componenet/card/page';
+
 
 const responsive = {
   superLargeDesktop: {
@@ -32,6 +34,7 @@ export const Trending = () => {
   return (
     <div className='trending'>
       <h2 className='heading'>Most Trending</h2>
+      <a href='/product' className='view'>View All Product</a>
       <Carousel responsive={responsive}>
         {newData.map((ele) => (
           <Card key={ele.id} data={ele} />

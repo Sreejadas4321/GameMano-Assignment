@@ -6,7 +6,7 @@ import "./page.css"
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar ">
       <ul className="menu">
         <li><FaHome className="icon" /></li>
         <li><FaEnvelope className="icon"><span className="notification-dot"></span></FaEnvelope></li>

@@ -1,7 +1,7 @@
 /* styles/Sidebar.css */
 .sidebar {
     width: 200px;
-    background: transparent;
+    background: #0000004D;
     color: #fff;
     display: flex;
     flex-direction: column;

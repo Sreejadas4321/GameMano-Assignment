@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className='w-full flex items-center justify-between bg-transparent text-white px-[7%] py-[13px]'>
       {/* <h2 className='font-press-start text-[30px] md:text-[60px] pr-[20px] md:pr-[50px] text-[#EAD2A7]'>QG</h2> */}
-      <div className='flex-1 flex justify-center text-center pr-[90px] md:pr-[90px]'>
+      <div className='flex-1 flex justify-between text-center pr-[90px] md:pr-[90px]'>
         <li className='inline-block mx-[10px] md:mx-[15px] text-[18px] md:text-[18px] cursor-pointer border-r-[2px] border-[#ddd] pr-[15px] md:pr-[15px]'>Home</li>
         <li className='inline-block mx-[10px] md:mx-[15px] text-[18px] md:text-[18px] cursor-pointer border-r-[2px] border-[#ddd] pr-[15px] md:pr-[15px]'>Game Store</li>
         <li className='inline-block mx-[10px] md:mx-[15px] text-[18px] md:text-[18px] cursor-pointer'>Leaderboard</li>

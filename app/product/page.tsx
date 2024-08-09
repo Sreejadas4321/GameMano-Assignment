@@ -1,7 +1,9 @@
 import React from 'react'
+// import ProductLayout from './filter/productLayout/page'
 
-import ProductLayout from './filter/productLayout/page'
 import { Cdata } from '@/utils/componenet/commondata/page'
+import { Filter } from './filter/page'
+import Page from './[id]/page'
 
 
 const Product = () => {
@@ -9,7 +11,9 @@ const Product = () => {
     <div>
        {/* <Navbar/>
        <Sidebar/>  */}
-       <ProductLayout/>
+       {/* <ProductLayout/> */}
+       <Filter/>
+       <Page/>
        <Cdata/>
     </div>
   )

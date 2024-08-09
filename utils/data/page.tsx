@@ -9,6 +9,7 @@ export const useFetch = (endpoint : any) => {
     try {
       let res = await axios.get(endpoint);
       let fetchedData = res.data;
+      console.log( res.data, "res")
 
       if (fetchedData) {
         setData(fetchedData.products);

@@ -42,3 +42,98 @@
 .filter-button:hover {
     background-color: #ec971f;
 }
+/* .scrollable-card-container {
+    max-height: 1000px; 
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: transparent;
+    
+    border-radius: 10px; 
+} */
+
+.scrollable-card-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.side-by-side-container {
+    display: flex;
+    gap: 20px; /* Space between the category list and the card container */
+    padding: 20px;
+    background-color: transparent; 
+    padding-top: 100px;/* Optional: background for the whole section */
+}
+
+.filter-container {
+    flex: 0 0 250px; /* Fixed width for the category list */
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.scrollable-card-container {
+    flex-grow: 1;
+    max-height: 1000px; /* Adjust height as needed */
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.scrollable-card-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.scrollable-card-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.product-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    padding-right: 20px;
+  }
+  
+  .product-controls select {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .product-controls select:focus {
+    outline: none;
+    border-color: #666;
+  }
+  .results-found {
+    margin-bottom: 10px; /* Spacing between results text and the product cards */
+    font-size: 16px; /* Adjust the size of the text */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark text color */
+    padding: 8px 12px; /* Add some padding for spacing */
+    border-radius: 4px; /* Rounded corners */
+    background-color: black; /* Light gray background for visibility */
+    border: 1px solid #ddd; /* Subtle border */
+    text-align: left; 
+    display: inline-flex;/* Align text to the left */
+  }

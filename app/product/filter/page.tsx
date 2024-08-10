@@ -105,13 +105,15 @@ import Card from '@/utils/componenet/card/page';
           <div className="category-box">
             <h3>Categories</h3>
             <ul>
-              {categories.map((category, index) => (
+              {categories.map((category :any, index: number) => (
                 <li key={index}>
                   <input
                     type="checkbox"
+                   
                     value={category.name}
-                    onChange={handleCategoryChange}
+                    onChange={handleCategoryChange} 
                   />
+                                  
                   <label htmlFor={category.name}>{category.name}</label>
                 </li>
               ))}

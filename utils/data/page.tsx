@@ -2,21 +2,32 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-export const useFetch = (endpoint ) => {
-  const [data, setData] = useState([]);
+// Define the types for the fetched data
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  // Add other fields that the products might have
+}
+
+interface FetchResponse {
+  products: Product[];
+}
+
+export const useFetch = (endpoint: string) => {
+  const [data, setData] = useState<Product[]>([]);
 
   const fetchData = async () => {
     try {
-      let res = await axios.get(endpoint);
-      let fetchedData = res.data;
-      
+      const res = await axios.get<FetchResponse>(endpoint);
+      const fetchedData = res.data;
 
-      if (fetchedData) {
+      if (fetchedData && fetchedData.products) {
         setData(fetchedData.products);
-        // console.log(fetchedData.products);
       }
     } catch (error) {
-      console.log("error", error);
+      console.error("Error fetching data", error);
     } finally {
       // Any final cleanup or actions
     }

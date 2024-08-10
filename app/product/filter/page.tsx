@@ -6,7 +6,7 @@ import './page.css';
 import { useFetch } from '@/utils/data/page';
 import Card from '@/utils/componenet/card/page';
 
-export const Filter = () => {
+ const Filter = () => {
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
@@ -134,3 +134,4 @@ export const Filter = () => {
   );
 };
 
+export default Filter

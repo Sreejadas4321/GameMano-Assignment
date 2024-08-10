@@ -109,7 +109,6 @@ import Card from '@/utils/componenet/card/page';
                 <li key={index}>
                   <input
                     type="checkbox"
-                    id={category.id}
                     value={category.name}
                     onChange={handleCategoryChange}
                   />

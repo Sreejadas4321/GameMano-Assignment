@@ -26,6 +26,8 @@
     font-size: 18px;
     color: #333;
     margin: 10px 0 5px;
+    max-height: 60px;
+    overflow: hidden;
   }
   
   .description {

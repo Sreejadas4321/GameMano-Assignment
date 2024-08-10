@@ -10,13 +10,13 @@
   
   .gameDetails {
     color: white;
-    margin: 2rem;
+    /* margin: 2rem; */
   }
   
-  .gameDetails h1 {
+  /* .gameDetails h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-  }
+  } */
   
   .gameDetails p {
     margin: 1rem 0;
@@ -31,5 +31,15 @@
     border-radius: 5px;
     cursor: pointer;
     margin-right: 1rem;
+  }
+   
+  
+  .buyButton:hover {
+    color: #e58e27;
+    background: #fff;
+  }
+  .tryButton:hover {
+    color: #e58e27;
+    background: #fff;
   }
   

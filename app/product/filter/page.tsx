@@ -29,7 +29,7 @@ export const Filter = () => {
 
       if (fetchedData) {
         setCategories(fetchedData);
-         console.log(fetchedData,'data');
+         
       }
     } catch (error) {
       console.log("error", error);
@@ -78,7 +78,8 @@ const sortedProducts = getSortedProducts(allProducts);
   return (
     <>
     
-    <div className="product-controls">
+    <div className="product-controls flex justify-between">
+      <div>Search result for all categories :</div>
         <select onChange={handleSortChange} value={sortOrder}>
           <option value="">Sort By</option>
           <option value="low-to-high">Price: Low to High</option>
@@ -88,7 +89,7 @@ const sortedProducts = getSortedProducts(allProducts);
       <div className="results-found">
             <p>{totalProducts} products found</p>
           </div>
-    <div className="side-by-side-container">
+    <div className="side-by-side-container flex-col md:flex-row">
       
     <div className="filter-container">
     <div className="category-box">

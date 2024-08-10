@@ -33,21 +33,23 @@
 .menu li,
 .settings li {
   margin: 20px 0;
-  padding: 10px 20px;
+  
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: center;
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 24px;
+
 }
 
 .notification-dot {
   position: absolute;
-  top: -5px;
-  right: 5px;
+  top: 1pxpx;
+  left: -20pxpx;
   background-color: red;
   width: 8px;
   height: 8px;

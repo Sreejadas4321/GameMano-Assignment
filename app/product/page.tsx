@@ -13,7 +13,7 @@ const Product = () => {
        <Sidebar/>  */}
        {/* <ProductLayout/> */}
        <Filter/>
-       <Page/>
+       {/* <Page/> */}
        <Cdata/>
     </div>
   )

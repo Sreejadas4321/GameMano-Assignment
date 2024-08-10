@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Press_Start_2P } from "next/font/google";
-import AllLayout from "@/utils/componenet/alllayout";
+// import AllLayout from "@/utils/componenet/alllayout";
 import Landing from "@/utils/landing/page";
 // import Navbar from "./componenet/navbar/page";
 // import HSidebar from "./componenet/hover-sidebar/page";
@@ -27,7 +27,10 @@ export default function RootLayout({
       
       <body className={inter.className}>
      <Landing/>
-    {children}
+     <div className="ml-[100px] py-4 px-6 overflow-y-auto">
+     {children}
+     </div>
+    
        
       </body>
     </html>

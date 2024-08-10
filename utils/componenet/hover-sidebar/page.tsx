@@ -5,19 +5,43 @@ import "./page.css"
 
 const HSidebar = () => {
   return (
-    <div className="hsidebar">
+    <div className="hsidebar z-[100] sideNavigation">
       <div className="logo">GameQuest</div>
       <ul className="menu">
-        <li><FaHome className="icon" /> Home</li>
-        <li><FaEnvelope className="icon"/><span className="notification-dot"></span> Messages</li>
-        <li><FaStore className="icon" /> Game Store</li>
-        <li><FaCreditCard className="icon" /> Payments</li>
-        <li><FaTrophy className="icon" /> Leaderboard</li>
+        <div className='flex items-center justify-start py-4 px-6'> 
+          <div><FaHome className="icon" /></div>
+          <div>Home</div>
+        </div>
+        
+        <div className='flex items-center justify-start py-4 px-6'> 
+          <div><FaEnvelope className="icon"/></div>
+          <div className='relative'><span className="absolute top-[1px] left-[-20px] bg-red-600 rounded-[50%] w-[8px] h-[8px]"></span> Messages</div>
+        </div>
+        <div className='flex items-center justify-start py-4 px-6'> 
+          <div><FaStore className="icon" /></div>
+          <div>Game Store</div>
+        </div>
+        <div className='flex items-center justify-start py-4 px-6'> 
+          <div><FaCreditCard className="icon" /> </div>
+          <div>Payment</div>
+        </div>
+        <div className='flex items-center justify-start py-4 px-6'> 
+          <div><FaTrophy className="icon" /> </div>
+          <div>Leaderboard</div>
+        </div>
+       
       </ul>
       <div className="bottom-line"></div>
       <ul className="settings">
-        <li><FaCog className="icon" /> Settings</li>
-        <li><FaSignOutAlt className="icon" /> Logout</li>
+      <div className='flex items-center justify-start p-4'> 
+          <div><FaCog className="icon" /></div>
+          <div>Settings</div>
+        </div>
+        <div className='flex items-center justify-start p-4'> 
+          <div><FaSignOutAlt className="icon" /></div>
+          <div>Logout</div>
+        </div>
+        
       </ul>
     </div>
   );

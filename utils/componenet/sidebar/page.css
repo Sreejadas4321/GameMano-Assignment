@@ -1,6 +1,6 @@
 /* styles/Sidebar.css */
 .sidebar {
-    width: 200px;
+    width: 100px;
     background: transparent;
     color: #fff;
     display: flex;
@@ -10,10 +10,9 @@
     height: 100vh;
     position: fixed;
     border-right: 2px solid #ddd;
-    padding-right: 60px;
-    padding-left: 60px;
     overflow: hidden;
     z-index: 5;
+    top: 0px;
   }
   /* .sidebar {
     width: 250px; 
@@ -34,12 +33,14 @@
     margin: 0;
     width: 100%;
     text-align: center;
+    
   }
   
   .menu li,
   .settings li {
     margin: 20px 0;
     position: relative;
+    
   }
   
   .icon {

@@ -22,7 +22,7 @@ const Landing = () => {
  
 
   return (
-    <div className='container'>
+    <div className=''>
       <Navbar/>
       <div 
         onMouseEnter={() => setIsHovered(true)} 
@@ -33,11 +33,14 @@ const Landing = () => {
         {isHovered && <HSidebar  />
         }
       </div>
+      <div className='ml-[100px] py-4 px-6 overflow-y-auto'>
       {pathname == "/" && (<>
         <Home/>
         <Trending/>
         <Cdata/>
       </>)}
+      </div>
+      
       
       
     </div>

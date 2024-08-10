@@ -1,9 +1,9 @@
 .filter-container {
     width: 250px;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: #1e1e1e;
     color: #fff;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 
 .category-box {
@@ -69,9 +69,9 @@
 .side-by-side-container {
     display: flex;
     gap: 20px; /* Space between the category list and the card container */
-    padding: 20px;
+    /* padding: 20px; */
     background-color: transparent; 
-    padding-top: 100px;/* Optional: background for the whole section */
+   
 }
 
 .filter-container {
@@ -109,7 +109,7 @@
 
 .product-controls {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     margin-bottom: 10px;
     padding-right: 20px;
   }

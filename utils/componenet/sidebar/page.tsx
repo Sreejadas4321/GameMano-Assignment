@@ -6,7 +6,11 @@ import "./page.css"
 
 const Sidebar = () => {
   return (
-    <div className="sidebar ">
+    <div className="sidebar pt-4 px-6 ">
+      <div className='mb-4'>
+        <img src="/side_logo.png" alt="logo" className="w-[70px] h-[40px]" />
+      </div>
+      <div className="flex flex-col justify-between gap-[60px]">
       <ul className="menu">
         <li><FaHome className="icon" /></li>
         <li><FaEnvelope className="icon"><span className="notification-dot"></span></FaEnvelope></li>
@@ -16,10 +20,11 @@ const Sidebar = () => {
         <li><FaTrophy className="icon" /></li>
       </ul>
       
-      <ul className="settings">
+      <ul className="settings pt-[25px] ">
         <li><FaCog className="icon" /></li>
         <li><FaSignOutAlt className="icon" /></li>
       </ul>
+      </div>
       
     </div>
   );

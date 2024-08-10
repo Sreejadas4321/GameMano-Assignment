@@ -32,12 +32,15 @@ export const Trending = () => {
   const newData = data.slice(0, 5);
 
   return (
-    <div className='trending'>
-      <h2 className='heading'>Most Trending</h2>
-      <a href='/product' className='view'>View All Product</a>
+    <div className='trending rounded-[10px]'>
+      <div className='w-[100%] p-4 flex items-center justify-between'>
+      <h2 className='heading text-orange-400'>Most Trending</h2>
+      <a href='/product' className='text-[14px] hoverText'>View All Product</a>
+      </div>
+      
       <Carousel responsive={responsive}>
         {newData.map((ele) => (
-          <Card key={ele.id} data={ele} />
+          <Card key={ele?.id} data={ele} id={ele?.id} />
         ))}
       </Carousel>
     </div>

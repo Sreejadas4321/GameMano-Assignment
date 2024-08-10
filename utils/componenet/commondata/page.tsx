@@ -10,10 +10,13 @@ export const Cdata = () => {
   ];
 
   return (
-    <div>
+    <div className='mt-4 flex flex-col gap-8'>
      {data.map((ele) => {
-    console.log(ele);  // This will log each item in the data array
-    return <Common key={ele.id} data={ele} />;
+    
+    return (<>
+    <Common key={ele.id} data={ele} />
+    <div className='w-full h-[60px] bg-black'></div>
+    </>);
 })}
 
     </div>

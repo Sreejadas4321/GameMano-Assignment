@@ -1,18 +1,19 @@
 'use client'
 import Card from "@/utils/componenet/card/page";
+import { Cdata } from "@/utils/componenet/commondata/page";
 
 
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-  export default function Page({ params }) {
+  export default function Page({ params }:{params:any}) {
     const [paramData, setParamData] = useState([])
-    //  const { data } = useFetch(`https://dummyjson.com/products/${params.id}`);
+    
 
     const fetchParamData = async () => {
         try {
-          let res = await axios.get('https://dummyjson.com/products/categories');
+          let res = await axios.get(`https://dummyjson.com/products/${params?.id}`);
           let fetchedData =  await res.data;
     
           if (fetchedData) {
@@ -26,14 +27,13 @@ import { useEffect, useState } from "react";
     }
       useEffect (() => {
         fetchParamData();
-    }, [params.id]);
+    }, [params?.id]);
     
   
     return (
       <div>
         <Card data={paramData} id={params.id} />
-        
-        <div>okay</div>
+        <Cdata/>
       </div>
     );
   }

@@ -7,7 +7,7 @@ import { useFetch } from '@/utils/data/page';
 import Card from '@/utils/componenet/card/page';
 
  const Filter = () => {
-  const [categories, setCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
   const [sortOrder, setSortOrder] = useState<string>('');

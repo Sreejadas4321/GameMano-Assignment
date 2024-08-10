@@ -17,7 +17,7 @@
   
 }
 body{
-  background:  #0000004D;
+  background:  linear-gradient(black ,#8A3324 , orange  ,#8A3324 , black );
   
 }
 .container{

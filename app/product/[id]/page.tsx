@@ -1,6 +1,7 @@
 'use client'
 import Card from "@/utils/componenet/card/page";
 import { Cdata } from "@/utils/componenet/commondata/page";
+import Footer from "@/utils/componenet/footer/footer";
 
 
 import axios from "axios";
@@ -34,6 +35,7 @@ import { useEffect, useState } from "react";
       <div>
         <Card data={paramData} id={params.id} />
         <Cdata/>
+        <Footer/>
       </div>
     );
   }

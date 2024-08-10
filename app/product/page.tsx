@@ -4,6 +4,7 @@ import React from 'react'
 import { Cdata } from '@/utils/componenet/commondata/page'
 import { Filter } from './filter/page'
 import Page from './[id]/page'
+import Footer from '@/utils/componenet/footer/footer'
 
 
 const Product = () => {
@@ -15,6 +16,7 @@ const Product = () => {
        <Filter/>
        {/* <Page/> */}
        <Cdata/>
+       <Footer/>
     </div>
   )
 }

@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-export const useFetch = (endpoint : any) => {
+export const useFetch = (endpoint ) => {
   const [data, setData] = useState([]);
 
   const fetchData = async () => {

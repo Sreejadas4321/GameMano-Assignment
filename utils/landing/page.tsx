@@ -13,6 +13,7 @@ import { Trending } from './trending/page';
 import { Cdata } from '../componenet/commondata/page';
 
 import { usePathname } from 'next/navigation'
+import Footer from '../componenet/footer/footer';
 
 
 
@@ -38,6 +39,7 @@ const Landing = () => {
         <Home/>
         <Trending/>
         <Cdata/>
+        <Footer/>
       </>)}
       </div>
       

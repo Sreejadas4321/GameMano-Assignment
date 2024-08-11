@@ -35,6 +35,7 @@ import Carousel from 'react-multi-carousel';
       items: 1
     }
   };
+  
 
   const { data : allProducts  } = useFetch("https://dummyjson.com/products");
   const fetchCategories = async () => {
@@ -118,15 +119,24 @@ import Carousel from 'react-multi-carousel';
 
   return (
     <>
-    <Carousel responsive={responsive}>
+    <Carousel responsive={responsive} 
+    autoPlaySpeed={2500}
+    autoPlay={true}               // Enables autoplay         // Set autoplay speed in milliseconds (3 seconds here)
+    infinite={true}
+    rewind={true} 
+    showDots={true}
+    arrows={false}
+    >
         {allProducts?.map((ele:any) => (
-          <div className='w-[100%] h-[450px] p-4 border border-black flex justify-center items-center mb-4' key={ele?.id}>
+          <div className='w-[100%] h-[450px] p-4  bg-gradient-to-r from-yellow-200 to-yellow-50  flex justify-center items-center mb-6' key={ele?.id}>
           <img className='w-[400px] h-[400px]' src={ele?.images?.[0]}/>
           </div>
         ))}
       </Carousel>
       <div className="product-controls flex justify-between">
-        <div>Search result for selected categories:</div>
+       
+      <div>Search result for selected categories: {selectedCategories.join(', ') || 'All'}</div>
+      
         <select onChange={handleSortChange} value={sortOrder}>
           <option hidden value="">Sort By</option>
           <option value="low-to-high">Price: Low to High</option>

@@ -2,13 +2,12 @@ import React from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 import './page.css'
 import { useFetch } from '@/utils/data/page';
 import Card from '@/utils/componenet/card/page';
 
 
-const responsive = {
+export const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 3000, min: 2000 },
     items: 5

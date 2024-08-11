@@ -5,18 +5,38 @@ import React, { useEffect, useState } from 'react';
 import './page.css';
 import { useFetch } from '@/utils/data/page';
 import Card from '@/utils/componenet/card/page';
+import Carousel from 'react-multi-carousel';
+
 
  const Filter = () => {
   const [categories, setCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
-  const [sortOrder, setSortOrder] = useState<string>('');
-   
+  const [sortOrder, setSortOrder] = useState<string>(''); 
   const [totalProducts, setTotalProducts] = useState<number>(0);
+  const [carousel, setCarousel] = useState<any[]>([])
 
+
+   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 3000, min: 2000 },
+      items: 1
+    },
+    desktop: {
+      breakpoint: { max: 2000, min: 1024 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
   const { data : allProducts  } = useFetch("https://dummyjson.com/products");
-  
   const fetchCategories = async () => {
     try {
       const res = await axios.get('https://dummyjson.com/products/categories');
@@ -26,7 +46,7 @@ import Card from '@/utils/componenet/card/page';
     }
   };
 
-  
+ 
 
   useEffect(() => {
     fetchCategories();
@@ -39,6 +59,15 @@ import Card from '@/utils/componenet/card/page';
       setFilteredProducts(allProducts);
     }
   }, [allProducts, selectedCategories]);
+
+  useEffect(()=>{
+   let temp= allProducts?.map((ele:any)=>{
+    return ele?.images?.[0]  
+    
+  })
+  setCarousel(temp)
+  console.log(temp,"temp")
+  },[])
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -89,10 +118,17 @@ import Card from '@/utils/componenet/card/page';
 
   return (
     <>
+    <Carousel responsive={responsive}>
+        {allProducts?.map((ele:any) => (
+          <div className='w-[100%] h-[450px] p-4 border border-black flex justify-center items-center mb-4' key={ele?.id}>
+          <img className='w-[400px] h-[400px]' src={ele?.images?.[0]}/>
+          </div>
+        ))}
+      </Carousel>
       <div className="product-controls flex justify-between">
         <div>Search result for selected categories:</div>
         <select onChange={handleSortChange} value={sortOrder}>
-          <option value="">Sort By</option>
+          <option hidden value="">Sort By</option>
           <option value="low-to-high">Price: Low to High</option>
           <option value="high-to-low">Price: High to Low</option>
         </select>

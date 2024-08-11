@@ -21,7 +21,7 @@ const Card = ({data, id}:{data:any, id:any}) => {
     return (
         <div className='card'>
           <FallbackImage
-                src={`${data?.thumbnail}/xyz`}
+                src={`${data?.thumbnail}`}
                 alt={data?.title}
                 customClass='image'
                 fallbackSrc="https://via.placeholder.com/200"

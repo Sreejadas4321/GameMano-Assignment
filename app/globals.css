@@ -58,6 +58,10 @@ body{
   animation: slideIn 2s ease forwards; 
  
 }
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+}
 @keyframes slideIn {
   to {
     transform: translateX(0);

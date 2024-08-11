@@ -68,19 +68,21 @@
     margin-left: 5px;
   }
   
-  .friends-playing {
+  /* .friends-playing {
     margin-top: 20px;
     display: flex;
     align-items: center;
     color: white;
-}
+    font-size: 15px;
+} */
 
 .friend-count {
     margin-right: 10px;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .rating-stars span {
-    color: gold; /* Star color */
-    font-size: 18px;
+    color: white; /* Star color */
+    font-size: 15px;
 }

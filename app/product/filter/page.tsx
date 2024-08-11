@@ -66,8 +66,7 @@ import Carousel from 'react-multi-carousel';
     return ele?.images?.[0]  
     
   })
-  setCarousel(temp)
-  console.log(temp,"temp")
+  
   },[])
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {

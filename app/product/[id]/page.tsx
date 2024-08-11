@@ -4,6 +4,7 @@ import Card from "@/utils/componenet/card/page";
 import ProductDetailsCard from "@/utils/componenet/card/productdetails";
 
 import { Cdata } from "@/utils/componenet/commondata/page";
+import Footer from "@/utils/componenet/footer/footer";
 
 
 import axios from "axios";
@@ -50,6 +51,7 @@ import { useEffect, useState } from "react";
           price={paramData?.price}
         />
         <Cdata/>
+        <Footer/>
       </div>
     );
   }

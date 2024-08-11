@@ -5,6 +5,7 @@ interface GameData {
   launchDate: string;
   description: string;
   platforms: string[];
+  rating:number;
   price: number;
 }
 
@@ -13,13 +14,13 @@ interface CommonProps {
 }
 
 export const Common : React.FC<CommonProps> =  ({ data }) => {
-    
+  let starArr = new Array(Math.floor(data.rating || 4)).fill(1)  
   return (
     <div className="home-container">
       <div className="game-title">{data.name}</div>
       <div className="release-date">RELEASE DATE: {data.launchDate}</div>
       <p className="description">
-        Players assume the role of Deacon St. John, a former bounty hunter struggling to survive in a post-apocalyptic world filled with zombie-like creatures called Freaks. Though players are surrounded by death and danger on all sides, the world that they get to explore feels as though it is truly alive, which can encourage players to take risks when they probably shouldn't.
+       {data.description}
       </p>
       <div className="actions">
         <button className="play-button">Play Now</button>
@@ -29,6 +30,15 @@ export const Common : React.FC<CommonProps> =  ({ data }) => {
         Available on: <span className="platform">iOS</span>{' '}
         <span className="platform">Windows</span>
       </div>
+      <div className="friends-playing">
+        <span className="friend-count">40 of your friends are playing</span>
+        <div className="rating-stars">
+          
+        {starArr.map((_, index) => (
+            <p key={index} className='inline-block'>⭐</p>
+          ))}
+        </div>
+        </div>
     </div>
   );
 };
